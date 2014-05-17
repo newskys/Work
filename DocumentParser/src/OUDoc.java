@@ -1,5 +1,11 @@
 import java.util.Date;
 
+/**
+ * 오늘의 유머 게시글 정보를 담는 클래스
+ * @author Vinckel
+ * @version 20140518
+ *
+ */
 public class OUDoc {
 	private String rawHtml;
 	private String title;
