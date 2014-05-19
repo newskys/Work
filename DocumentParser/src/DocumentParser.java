@@ -20,7 +20,7 @@ import org.jsoup.nodes.Document;
 /**
  * 
  * @author Vinckel
- * @version 20140519
+ * @version 20140520
  *
  */
 public class DocumentParser {
@@ -39,7 +39,7 @@ public class DocumentParser {
 	private static final String shae = ".*(샤에|셰이).*";
 	private static final String varys = ".*(바리스|대머리 고자아저씨).*";
 	private static final String tywin = ".*(티윈|타이윈).*";
-	private static final String danerys = ".*(대너리스|드네리스|데너리스|드내리스|대니).*";
+	private static final String daenerys = ".*(대너리스|드네리스|데너리스|드내리스|대니).*";
 	private static final String john = ".*(존스노우|존 스노우|존눈).*";
 	private static final String hound = ".*(하운드|산도르).*";
 	private static final String arya = ".*(아리아|아리야).*";
@@ -47,6 +47,14 @@ public class DocumentParser {
 	private static final String ygritte = ".*(이그리트).*";
 	private static final String margaery = ".*(마저리).*";
 	private static final String littlefinger = ".*(피터|리틀핑거|베일리쉬|바일리쉬).*";
+	private static final String oberyn = ".*(오베린|오베른).*";
+	
+	private static final String baratheon = ".*(바라테온).*";
+	private static final String stark = ".*(스타크).*";
+	private static final String lannister = ".*(라니스터).*";
+	private static final String targaryen = ".*(타르가르옌|타가리엔|타가리옌).*";
+	private static final String tyrell = ".*(타이렐|티렐).*";
+	
 
 	private static void init(Map<String, Integer> calledCharacters) {
 		calledCharacters.put("tyrion", 0);
@@ -57,14 +65,19 @@ public class DocumentParser {
 		calledCharacters.put("shae", 0);
 		calledCharacters.put("varys", 0);
 		calledCharacters.put("tywin", 0);
-		calledCharacters.put("danerys", 0);
+		calledCharacters.put("daenerys", 0);
 		calledCharacters.put("john", 0);
 		calledCharacters.put("hound", 0);
 		calledCharacters.put("arya", 0);
 		calledCharacters.put("joffrey", 0);
-		calledCharacters.put("ygritte", 0);
 		calledCharacters.put("margaery", 0);
 		calledCharacters.put("littlefinger", 0);
+		
+		calledCharacters.put("baratheon", 0);
+		calledCharacters.put("stark", 0);
+		calledCharacters.put("lannister", 0);
+		calledCharacters.put("targaryen", 0);
+		calledCharacters.put("tyrell", 0);
 	}
 	
 	public static void main(String[] args) {
@@ -293,8 +306,8 @@ public class DocumentParser {
 			calledCharacters.put("tywin", calledCharacters.get("tywin") + 1);
 
 		}
-		if (Pattern.matches(danerys, allTexts)) {
-			calledCharacters.put("danerys", calledCharacters.get("danerys") + 1);
+		if (Pattern.matches(daenerys, allTexts)) {
+			calledCharacters.put("daenerys", calledCharacters.get("daenerys") + 1);
 
 		}
 		if (Pattern.matches(john, allTexts)) {
@@ -313,16 +326,36 @@ public class DocumentParser {
 			calledCharacters.put("joffrey", calledCharacters.get("joffrey") + 1);
 
 		}
-		if (Pattern.matches(ygritte, allTexts)) {
-			calledCharacters.put("ygritte", calledCharacters.get("ygritte") + 1);
-
-		}
 		if (Pattern.matches(margaery, allTexts)) {
 			calledCharacters.put("margaery", calledCharacters.get("margaery") + 1);
 
 		}
 		if (Pattern.matches(littlefinger, allTexts)) {
 			calledCharacters.put("littlefinger", calledCharacters.get("littlefinger") + 1);
+
+		}
+		if (Pattern.matches(oberyn, allTexts)) {
+			calledCharacters.put("oberyn", calledCharacters.get("oberyn") + 1);
+
+		}
+		if (Pattern.matches(baratheon, allTexts)) {
+			calledCharacters.put("baratheon", calledCharacters.get("baratheon") + 1);
+
+		}
+		if (Pattern.matches(stark, allTexts)) {
+			calledCharacters.put("stark", calledCharacters.get("stark") + 1);
+
+		}
+		if (Pattern.matches(lannister, allTexts)) {
+			calledCharacters.put("lannister", calledCharacters.get("lannister") + 1);
+
+		}
+		if (Pattern.matches(targaryen, allTexts)) {
+			calledCharacters.put("targaryen", calledCharacters.get("targaryen") + 1);
+
+		}
+		if (Pattern.matches(tyrell, allTexts)) {
+			calledCharacters.put("tyrell", calledCharacters.get("tyrell") + 1);
 
 		}
 	}
